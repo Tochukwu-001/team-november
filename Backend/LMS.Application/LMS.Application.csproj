@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Dtos\AuthDto\**" />
+    <Compile Remove="Dtos\CourseDto\**" />
+    <EmbeddedResource Remove="Dtos\AuthDto\**" />
+    <EmbeddedResource Remove="Dtos\CourseDto\**" />
+    <None Remove="Dtos\AuthDto\**" />
+    <None Remove="Dtos\CourseDto\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Dtos\UserDto\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\LMS.Domain\LMS.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="11.9.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="8.0.0" />
+  </ItemGroup>
+
+</Project>
